@@ -124,4 +124,5 @@ public class Chap04Leon {
 	public static void newLine() {
 		System.out.println();
 	}
+
 }
