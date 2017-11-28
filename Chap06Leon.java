@@ -14,44 +14,44 @@ public class Chap06Leon {
 		//the type of the expression in the return statement must match the 
 		//return type of the method
 		
-//		System.out.println("6.1 Return values");
-//		System.out.print("Let me find the absolute value of x = ");
-//		double x = in.nextDouble();
-//		System.out.printf("OK, it's %f.\n",absoluteValue(x));
-//		System.out.println();
-//		
-//		System.out.println("6.2 Incremental development");
-//		//Incremental development starts with a working program and make small
-//		//incremental changes.
-//		System.out.println("Give me the coordinates of two point, the center"+" of the circle and a point on the perimeter. Then I will"+" tell you the area of the circle.");
-//		
-//		System.out.print("The x-coordinate of the center is x1 = ");
-//		double x1 = in.nextDouble();
-//		System.out.print("The y-coordinate of the center is y1 = ");
-//		double y1 = in.nextDouble();
-//		System.out.print("The x-coordinate of the parameter point is x2 = ");
-//		double x2 = in.nextDouble();
-//		System.out.print("The y-coordinate of the parameter point is y2 = ");
-//		double y2 = in.nextDouble();
-//		System.out.println(circleArea(x1,y1,x2,y2));
-//		System.out.println();
-//		
-//		System.out.println("6.5 Boolean methods");
-//		System.out.print("Give me a nunber, and I will tell you whether it" + " is positive or not. x = ");
-//		x = in.nextDouble();
-//		System.out.println(isPosOrNot(x));
-//		System.out.println();
-//		
-//		System.out.println("6.7 Factorial");
-//		System.out.print("Give me a non-negative integer, and I will tell "+"you its factorial. n = ");
-//		int n = in.nextInt();
-//		System.out.printf("n factorial is %d.\n",factorial(n));
-//		System.out.println();
-//		
-//		System.out.println("6.9 Fibonacci sequence");
-//		System.out.print("We want to find the i th number in the Fibonacci" + " sequence. n = ");
-//		int i = in.nextInt();
-//		System.out.printf("That will be %d", fibonacci(i));
+		System.out.println("6.1 Return values");
+		System.out.print("Let me find the absolute value of x = ");
+		double x = in.nextDouble();
+		System.out.printf("OK, it's %f.\n",absoluteValue(x));
+		System.out.println();
+		
+		System.out.println("6.2 Incremental development");
+		//Incremental development starts with a working program and make small
+		//incremental changes.
+		System.out.println("Give me the coordinates of two point, the center"+" of the circle and a point on the perimeter. Then I will"+" tell you the area of the circle.");
+		
+		System.out.print("The x-coordinate of the center is x1 = ");
+		double x1 = in.nextDouble();
+		System.out.print("The y-coordinate of the center is y1 = ");
+		double y1 = in.nextDouble();
+		System.out.print("The x-coordinate of the parameter point is x2 = ");
+		double x2 = in.nextDouble();
+		System.out.print("The y-coordinate of the parameter point is y2 = ");
+		double y2 = in.nextDouble();
+		System.out.println(circleArea(x1,y1,x2,y2));
+		System.out.println();
+		
+		System.out.println("6.5 Boolean methods");
+		System.out.print("Give me a nunber, and I will tell you whether it" + " is positive or not. x = ");
+		x = in.nextDouble();
+		System.out.println(isPosOrNot(x));
+		System.out.println();
+		
+		System.out.println("6.7 Factorial");
+		System.out.print("Give me a non-negative integer, and I will tell "+"you its factorial. n = ");
+		int n = in.nextInt();
+		System.out.printf("n factorial is %d.\n",factorial(n));
+		System.out.println();
+		
+		System.out.println("6.9 Fibonacci sequence");
+		System.out.print("We want to find the i th number in the Fibonacci" + " sequence. n = ");
+		int i = in.nextInt();
+		System.out.printf("That will be %d", fibonacci(i));
 		
 		System.out.println("Exercise 6.1");
 		isPosOrNot(2); //1. Nothing happened.
@@ -59,7 +59,7 @@ public class Chap06Leon {
 		
 		System.out.println("Exercise 6.2");
 		System.out.print("n = ");
-		int n = in.nextInt();
+		n = in.nextInt();
 		System.out.print("m = ");
 		int m = in.nextInt();
 		System.out.println(isDivisible(n,m));
@@ -78,7 +78,7 @@ public class Chap06Leon {
 		System.out.println(Multadd(Math.cos(Math.PI/4),0.5,Math.sin(Math.PI/4)));
 		System.out.println(Multadd(1.0,Math.log(10),Math.log(20)));
 		System.out.print("x = ");
-		double x = in.nextInt();
+		x = in.nextInt();
 		System.out.println(expSum(x));
 		
 		System.out.println("Exercise 6.5");
