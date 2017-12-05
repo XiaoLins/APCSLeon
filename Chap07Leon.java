@@ -96,7 +96,149 @@ public class Chap07Leon {
 		}
 		System.out.println("The sum is "+i);
 
+		System.out.println("Exercise 7.1");
+		//1.
+		//5 10
+		//6 10
+		//3 10
+		//4 10
+		//2 10
+		//1 10
+		//2.
+		//10
+		//5
+		//6
+		//3
+		//4
+		//2
+		//3.
+		//Yes, it terminates for any positive value of n.
+		//For odd numbers, it will be added by 1 and become an even number.
+		//For even numbers, it will be divided by two, and it will become either an even number or an odd number.
+		//Therefore, the number will be finally become 1 and the loop will be terminated.
+		
+		System.out.println("Exercise 7.2");
+		System.out.println(squareRoot(81.0));
+		
+		System.out.println("Exercise 7.3");
+		System.out.println(power(2.0,4));
+		
+		System.out.println("Exercise 7.4");
+		System.out.println(factorial(4));
+		
+		System.out.println("Exercise 7.5");
+		System.out.println(myexp(1.0,4));
+		check(1.0);
+		double checkNum = 0.1; 
+		while(checkNum<=100) {
+			check(checkNum);
+			checkNum = checkNum * 10.0;
+		}
+		
+		checkNum = -0.1; 
+		while(checkNum>=-100) {
+			check(checkNum);
+			checkNum = checkNum * 10.0;
+		}
+		
+		System.out.println("Exercise 7.6");
+		System.out.println(gauss(1.0,25));
+		System.out.println(Math.exp(-1.0));
 	}
+	
+	public static double gauss (double x, int n) {
+		double result = 1;
+		double previousNumerator = x*x;
+		double previousDenominator = -1;
+		for(int i = 1; i <= n; i++) {
+			result = result + (previousNumerator*x*x) / (previousDenominator*i);
+			previousNumerator = previousNumerator*x*x;
+			previousDenominator = previousDenominator*-i;
+		}
+		return result;
+	}
+	
+	
+	public static void check(double x) {
+		System.out.println(x + "\t" + myexp(x,100) + "\t" + Math.exp(x));
+	}
+	
+	public static double myexp(double x, int n) {
+		double result = 1;
+		double previousNumerator = x;
+		double previousDenominator = 1;
+		for(int i = 1; i<=n; i++) {
+//			result = result + (power(x,i)/factorial(i));
+			result = result + (previousNumerator * x) / (previousDenominator * i);
+			previousNumerator = previousNumerator * x;
+			previousDenominator = previousDenominator * i;
+		}
+		return result;
+	}
+	
+	
+//	public static double power(double x, int n) {
+//		if (n < 0) {
+//			return -1;
+//		} else if(n == 0) {
+//			return 1;
+//		} else if (n % 2 == 0) {
+//			return power(x,n/2) * power(x,n/2);
+//			return Math.pow(power(x,n/2),2);
+//		} else {
+//			return x * power(x,n-1);
+//		}
+//
+//	}
+	
+	public static double power(double x, int n) {
+		double result = 1;
+		for(int i=1;i<=n;i++) {
+			result = result * x;
+		}
+		return result;
+	}
+	
+//	public static int factorial(int n) {
+//		if (n == 0) {
+//			return 1;
+//		} else if (n<0) {
+//			return -1;
+//		}
+//		int step = n;
+//		int result = 1;
+//		while (step != 0) {
+//			result = result * step;
+//			step--;
+//		}
+//		return result;
+//	}
+	
+	public static int factorial(int n) {
+		if (n==0) {
+			return 1;
+		} else if (n<0) {
+			return -1;
+		}
+		int result = 1;
+		for(int i = 1; i<=n ;i++) {
+			result = result * i;
+		}
+		return result;
+	}
+	
+	
+	
+	public static double squareRoot(double x) {
+		double result = x / 2.0;
+		double trueSqrt = Math.sqrt(x);
+		while (!(Math.abs(trueSqrt - result) < 0.0001)) {
+			result = (result + x / result) / 2.0;
+		}
+		return result;
+	}
+	
+	
 	
 //	public static void multiTable(int n) {
 //		int i = 1;
