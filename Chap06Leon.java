@@ -167,7 +167,7 @@ public class Chap06Leon {
 	
 	
 	public static double expSum(double x) {
-		return Multadd(x,Math.pow(Math.E, -x),Math.sqrt(1-Math.pow(Math.E, -x)));
+		return Multadd(x,Math.exp(-x),Math.sqrt(1-Math.exp(-x)));
 	}
 	
 	public static double Multadd (double a, double b, double c) {
@@ -176,21 +176,11 @@ public class Chap06Leon {
 	
 	
 	public static boolean isTriangle (int a, int b, int c) {
-		if (a+b<=c) {
-			return false;
-		} else if(a+c<=b) {
-			return false;
-		} else if(b+c<=a) {
-			return false;
-		}
-		return true;
+		return (a+b<=c && a+c<=b && b+c<=a);
 	}
 	
 	public static boolean isDivisible(int n, int m) {
-		if (m%n == 0) {
-			return true;
-		}
-		return false;
+		return (m % n == 0);
 	}
 	
 	public static double absoluteValue(double x) {

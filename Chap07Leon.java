@@ -36,6 +36,12 @@ public class Chap07Leon {
 		//method (int n) and method (int m) are not different.
 		//method (int n) and method (double x) are different.
 		
+		System.out.println();
+		System.out.print("Let me generate the n * n multiplication table. n = ");
+		int n = in.nextInt();
+		multiTable(n);
+		System.out.println();
+		
 		System.out.println("7.5 The for statement");
 		//A for loop has a concise syntax for writing loops.
 		//Rewrite the printRow(int n), multiTable(), printRow(int r, int c) and
@@ -193,9 +199,23 @@ public class Chap07Leon {
 	
 	public static double power(double x, int n) {
 		double result = 1;
-		for(int i=1;i<=n;i++) {
-			result = result * x;
+		if (n > 0) {
+			for(int i=1;i<=n;i++) {
+				result = result * x;
+			}
+		} else if (n == 0) {
+			if(x != 0) {
+				result = 1;
+			} else {
+				result = -1;
+			}
+		} else if (n < 0) {
+			for(int i=1; i<= Math.abs(n);i++) {
+				result = result * x;
+			}
+			result = 1 / result;
 		}
+
 		return result;
 	}
 	
@@ -230,9 +250,10 @@ public class Chap07Leon {
 	
 	
 	public static double squareRoot(double x) {
-		double result = x / 2.0;
-		double trueSqrt = Math.sqrt(x);
-		while (!(Math.abs(trueSqrt - result) < 0.0001)) {
+		double previousResult = 0 ;
+		double result = x / 2.0 ;
+		while (!(Math.abs(previousResult - result) < 0.0001)) {
+			previousResult = result;
 			result = (result + x / result) / 2.0;
 		}
 		return result;
@@ -260,8 +281,7 @@ public class Chap07Leon {
 			return;
 		}
 		for (i = 1; i <= n; i++) {
-			printRow(1,n);
-			System.out.println();
+			printRow(i,n);
 		}
 	}
 //	public static void printRow(int r, int c) {
