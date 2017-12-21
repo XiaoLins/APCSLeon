@@ -34,7 +34,7 @@ public class Chap08Leon {
 		a[3] = 4;
 		
 		int[] b = {5,6,7,8};
-		//Array constants can only be used in initializers.
+		//Array constants can only be used in initializors.
 		out.println();
 		
 		out.println("8.3 & 8.5 Displaying arrays, array length");
@@ -263,7 +263,6 @@ public class Chap08Leon {
 	        return maxIn1;
         }
         return maxIn2;
-	    //no awkward recursive any more :(
     }
 
 
